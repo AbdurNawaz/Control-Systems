@@ -8,7 +8,12 @@ from matplotlib.pyplot import style
 
 G = control.TransferFunction((25.05, 100.2), (1, 8, 16.05, 28.2))
 
-rlist, klist = control.rlocus(G, grid=0)
+rlist, klist = control.rlocus(G)
 
-plt.grid()
+
+plt.annotate("Pole, P1", (-6.13, -2))
+plt.annotate("Pole, P2", (-1, 3))
+plt.annotate("Pole, P3", (-1, -3))
+plt.annotate("Zero, Z1", (-4, 1))
+plt.legend()
 plt.show()
